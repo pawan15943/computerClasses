@@ -1,0 +1,10 @@
+/* Admin CSS Starts Here */
+
+.sidebar {
+  width: 20rem!important;
+  background: #20367f !important;
+}
+.sidebar .nav-item .nav-link, .sidebar .nav-item .nav-link a{
+  width: 18rem;
+  text-transform: uppercase;
+}

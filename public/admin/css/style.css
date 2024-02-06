@@ -1,0 +1,45 @@
+/* Admin CSS Starts Here */
+#wrapper #content-wrapper {
+  background-color: #f5ffef;
+}
+
+.sidebar {
+  width: 20rem !important;
+  background: #20367f !important;
+}
+
+.sidebar .nav-item .nav-link {
+  width: 18rem;
+  text-transform: uppercase;
+}
+
+.sidebar .nav-item .nav-link a {
+  text-transform: uppercase;
+}
+
+#dataTable th,
+#dataTable td {
+  font-size: 14px;
+  padding: .3rem 1rem;
+  color: #000;
+  vertical-align: middle;
+}
+
+/* #dataTable a,
+.btn {
+  background: #44861a;
+  padding: .3rem 1rem !important;
+  border: none !important;
+  color: #fff;
+  border-radius: .5rem !important;
+  font-size: 14px !important;
+  /* line-height: 16px; */
+  margin: 0 !important;
+  text-decoration: none;
+  cursor: pointer;
+} */
+
+#dataTable th {
+  background: #20367f;
+  color: #fff;
+}
