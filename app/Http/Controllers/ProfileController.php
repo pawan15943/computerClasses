@@ -82,7 +82,7 @@ class ProfileController extends Controller
                  'class_id' => ['required_if:myForm_id,==,myForm3'],
                  'course_id' => ['required_if:myForm_id,==,myForm3'],
                  'center' => ['required_if:myForm_id,==,myForm3'],
-                 'user_photo' => ['required_if:myForm_id,==,myForm4'],
+                 'user_photo' => ['required_if:myForm_id,myForm4', 'image', 'dimensions:max_width=1000,max_height=1000', 'max:2048'],
               
             ],
             [
@@ -91,6 +91,9 @@ class ProfileController extends Controller
                 'phone.required_if' => 'Phone No. is required',
                 'father_name.required_if' => 'Father Name is required',
                 'user_photo.required_if' => 'Photo is required',
+                'user_photo.image' => 'The user photo must be an image file.',
+                'user_photo.dimensions' => 'The user photo must not exceed 1000x1000 pixels.',
+                'user_photo.max' => 'The user photo must not be larger than 100 KB.', 
                 'country_id.required_if' => 'Country Field is required',
                 'state_id.required_if' => 'State Field is required',
                 'city_id.required_if' => 'City Field is required',

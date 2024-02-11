@@ -421,12 +421,9 @@
     </div>
 </section>
 
-
    <!-- Use the full version of jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.min.css">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.all.min.js"></script>
     <script>
 
         $(document).ready(function () {
@@ -576,18 +573,14 @@
                     suggestion_method: {
                         required: true,
                     },
-                    // suggested_person_name: {
-                    //     required: true,
-                    // },
+                  
 
                 },
                 messages: {
                     suggestion_method: {
                         required: "Please select your How you know about us.",
                     },
-                    // suggested_person_name: {
-                    //     required: "Please enter person Name.",
-                    // }
+                   
                 },
                 errorPlacement: function (error, element) {
                     // Place the error message after the corresponding .form-floating div

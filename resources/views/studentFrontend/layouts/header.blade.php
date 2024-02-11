@@ -262,7 +262,7 @@
                                                     <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3 mt-md-0">
                                                         <span>1st Instalment Paid On :</span>
                                                         <h4 class="text-success"><i class="fa fa-calendar"></i>  {{$transection->transaction_date}}
-                                                            <a href="{{$transection->reciept}}" class=" action-edit-pro-file"><i class="fa fa-download"></i> Receipt</a>
+                                                            <a href="{{$transection->acknowledgement_receipt}}" class=" action-edit-pro-file" download=""><i class="fa fa-download"></i> Receipt</a>
                                                         </h4>
                                                     </div>
                                                     @endforeach
@@ -282,7 +282,7 @@
                                                     <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3 mt-md-0">
                                                         <span> {{$key+1}} Instalment Paid On :</span>
                                                         <h4 class="text-success"><i class="fa fa-calendar"></i> {{$transection->transaction_date}}
-                                                            <a href="{{$transection->reciept}}" class="action-edit-pro-file"><i class="fa fa-download"></i> Receipt</a>
+                                                            <a href="{{$transection->acknowledgement_receipt}}" class="action-edit-pro-file" download=""><i class="fa fa-download"></i> Receipt</a>
                                                         </h4>
                                                     </div>
 
@@ -298,7 +298,7 @@
                                                     <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3 mt-md-0">
                                                         <span> {{$key+1}} Instalment Paid On :</span>
                                                         <h4 class="text-success"><i class="fa fa-calendar"></i> {{$transection->transaction_date}}
-                                                            <a href="{{$transection->reciept}}" class=" action-edit-pro-file"><i class="fa fa-download"></i> Receipt</a>
+                                                            <a href="{{$transection->acknowledgement_receipt}}" class=" action-edit-pro-file" download=""><i class="fa fa-download"></i> Receipt</a>
                                                         </h4>
                                                     </div>
                                                     @endforeach
@@ -307,7 +307,7 @@
                                                     <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3 mt-md-0">
                                                         <span> Fees Paid On :</span>
                                                         <h4 class="text-success"><i class="fa fa-calendar"></i> {{$transection->transaction_date}}
-                                                            <a href="{{$transection->reciept}}" class="ps-2 action-edit-pro-file"><i class="fa fa-download"></i> Receipt</a>
+                                                            <a href="{{$transection->acknowledgement_receipt}}" class="ps-2 action-edit-pro-file" download=""><i class="fa fa-download"></i> Receipt</a>
                                                         </h4>
                                                     </div>
                                                     @endforeach
@@ -317,7 +317,7 @@
                                                     @if(!empty($user_profile->updated_at))
                                                     <span>Installment Due On :</span>
                                                    
-                                                    <h4 class="text-danger"><i class="fa fa-calendar"></i> {{ \Carbon\Carbon::parse($user_profile->updated_at)->format('d-m-Y') }}<a href="{{ route('qrcodeview') }}" class="ps-2 action-edit-pro-file"> Pay Now <i class="las la-angle-right"></i></a>
+                                                    <h4 class="text-danger"><i class="fa fa-calendar"></i> {{ \Carbon\Carbon::parse($user_profile->updated_at)->format('d-m-Y') }}<a class="ps-2 action-edit-pro-file"> Pay Now <i class="las la-angle-right"></i></a>
                                                     </h4>
                                                    
                                                     @endif

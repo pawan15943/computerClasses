@@ -20,9 +20,9 @@
                         <td>{{$student_profile->duration}} Months</td>
                         <td>
                             @if($student_profile->pending_amount==0)
-                            <small class="bg-danger text-white d-inline px-2 py-1 rounded">Pending</small>
-                            @else
                             <small class="bg-success text-white d-inline px-2 py-1 rounded">Paid</small>
+                            @else
+                            <small class="bg-danger text-white d-inline px-2 py-1 rounded">Pending</small>
                             @endif
                             <!-- <small class="bg-success text-white d-inline px-2 py-1 rounded">Verified</small> -->
 

@@ -1,3 +1,15 @@
+<!-- JQuery file -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap file-->
+
+<!-- Owl Js file -->
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/owl-functions.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.all.min.js"></script>
+<!-- Bootstrap file-->
+<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 
 @php
 $completePro=App\Models\Student::where('user_id',Auth::user()->id)->whereNotNull('course_id')->count();
@@ -74,18 +86,7 @@ $studdent=App\Models\Student::join('courses','courses.id','=','students.course_i
 </footer>
 <!-- Page Content Ends Here -->
 
-<!-- JQuery file -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Bootstrap file-->
 
-<!-- Owl Js file -->
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/owl-functions.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.7/dist/sweetalert2.all.min.js"></script>
-<!-- Bootstrap file-->
-<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 
 <script>
     $('#plus').on('click', function() {

@@ -255,7 +255,7 @@ class StudentController extends Controller
 
     public function pdfgenerate($student_id){
        
-        $pdf_name = date('d-m-Y') . '_' . $student_id . '.pdf';
+        $pdf_name = date('d-m-Y_H-i-s') . '_' . $student_id . '.pdf';
         $student=Student::leftJoin('courses','students.course_id','=','courses.id')->where('students.id',$student_id)
            ->select('students.id as student_id','students.*','courses.course_name as course_name','courses.duration as duration','courses.course_fees','courses.discount')->first();
         $user=User::join('profiles','profiles.user_id','=','users.id')->where('users.id',$student->user_id)->first(); 

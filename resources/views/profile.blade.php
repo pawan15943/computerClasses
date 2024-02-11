@@ -49,7 +49,7 @@
         border-radius: 100%;
         border: 6px solid #F8F8F8;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-        > div {
+         {
             width: 100%;
             height: 100%;
             border-radius: 100%;
