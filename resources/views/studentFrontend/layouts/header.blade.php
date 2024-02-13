@@ -127,20 +127,8 @@
             </div>
         </div>
     </div>
-    <!-- We get Profile Completion Percenttage -->
-    @php
-    $completePro=App\Models\Student::where('user_id',Auth::user()->id)->whereNotNull('course_id')->count();
-    $uncompletePro=App\Models\Profile::where('user_id',Auth::user()->id)->count();
-    $completionPercentage = 0;
-    if ($completePro > 0 && $uncompletePro>0) {
-    $completionPercentage = 100;
-    } elseif ($uncompletePro > 0) {
-    $completionPercentage = 50;
-    } else {
-    $completionPercentage = 30;
-    }
-
-    @endphp
+   
+ 
     <!-- End -->
  
     <!-- Student Profile Section Starts Here -->
@@ -217,16 +205,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-2"></div>
-                                    @php
-                                    $student = App\Models\Student::where('user_id', Auth::user()->id)->first();
-                                    if($student != null){
-                                    $transections = DB::table('transaction')->where('student_id', $student->id)->get();
-                                    $transection_count = $transections->count();
-                                    $lastTransaction = $transections->last();
-                                    }else{
-                                        $transections=null;
-                                    }
-                                    @endphp
+                                   
                                     <div class="col-lg-10">
                                         <div class="profile-status">
                                             <div class="row justify-content-end">

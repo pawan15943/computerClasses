@@ -108,16 +108,14 @@ class UserController extends Controller
         }else{
             $users=null;
         }
-        // dd($users);
         return view('admin.student',compact('users'));
     }
 
     public function my_transaction(Request $request){
         $user_id=Auth::user()->id ;
-        $student_id = Student::where('user_id',$user_id)->first('id','course_id')->first();
+        $student_id = Student::where('user_id',$user_id)->first();
         $courses=Course::where('id',$student_id->course_id)->value('course_name');
         $my_transactions=DB::table('transaction')->where('student_id',$student_id->id)->get();
-
         return view('payment.my_transaction',compact('my_transactions','courses'));
     }
 
